@@ -1,0 +1,9 @@
+<h1>Chat rooms</h1>
+
+<p>
+  <%= link_to 'New chat room', new_chat_room_path, class: 'btn'%>
+</p>
+
+<ul>
+  <%= render @chat_rooms %>
+</ul>
