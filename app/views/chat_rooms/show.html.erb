@@ -1,1 +1,4 @@
-<h1>chat room show page</h1>
+<h1><%= @chat_room.title %></h1>
+<div id="messages">
+  <%= render @chat_room.messages %>
+</div>
