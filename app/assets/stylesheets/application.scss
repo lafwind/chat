@@ -16,3 +16,57 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$highlight: #44aed8;
+$frontground: #eeeeee;
+
+.navbar {
+    border-radius: 0;
+    background-color: $highlight;
+    border-color: $highlight;
+
+    .navbar-toggle {
+        border-color: $frontground;
+
+        .icon-bar {
+            color: $frontground;
+            background-color: $frontground;
+        }
+
+        &:hover {
+            color: lighten($frontground, 20%);
+            background-color: darken($highlight, 5%);
+        }
+
+        &:focus {
+            color: lighten($frontground, 20%);
+            background-color: darken($highlight, 5%);
+        }
+    }
+    .navbar-brand {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        color: $frontground;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: darken($highlight, 5%);
+        }
+    }
+
+    .navbar-collapse {
+        border-color: darken($highlight, 5%);
+
+        ul.navbar-nav {
+            li {
+                a {
+                    padding-left: 3rem;
+                    color: $frontground;
+                    &:hover {
+                        background-color: darken($highlight, 5%);
+                    }
+                }
+            }
+        }
+    }
+}
