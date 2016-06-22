@@ -20,53 +20,65 @@
 $highlight: #44aed8;
 $frontground: #eeeeee;
 
-.navbar {
-    border-radius: 0;
-    background-color: $highlight;
-    border-color: $highlight;
+header {
+    .navbar {
+        border-radius: 0;
+        background-color: $highlight;
+        border-color: $highlight;
 
-    .navbar-toggle {
-        border-color: $frontground;
+        .navbar-toggle {
+            border-color: $frontground;
 
-        .icon-bar {
+            .icon-bar {
+                color: $frontground;
+                background-color: $frontground;
+            }
+
+            &:hover {
+                color: lighten($frontground, 20%);
+                background-color: darken($highlight, 5%);
+            }
+
+            &:focus {
+                color: lighten($frontground, 20%);
+                background-color: darken($highlight, 5%);
+            }
+        }
+        .navbar-brand {
+            padding-left: 3rem;
+            padding-right: 3rem;
             color: $frontground;
-            background-color: $frontground;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: darken($highlight, 5%);
+            }
         }
 
-        &:hover {
-            color: lighten($frontground, 20%);
-            background-color: darken($highlight, 5%);
-        }
+        .navbar-collapse {
+            border-color: darken($highlight, 5%);
 
-        &:focus {
-            color: lighten($frontground, 20%);
-            background-color: darken($highlight, 5%);
-        }
-    }
-    .navbar-brand {
-        padding-left: 3rem;
-        padding-right: 3rem;
-        color: $frontground;
-        text-transform: uppercase;
-
-        &:hover {
-            background-color: darken($highlight, 5%);
-        }
-    }
-
-    .navbar-collapse {
-        border-color: darken($highlight, 5%);
-
-        ul.navbar-nav {
-            li {
-                a {
-                    padding-left: 3rem;
-                    color: $frontground;
-                    &:hover {
-                        background-color: darken($highlight, 5%);
+            ul.navbar-nav {
+                li {
+                    a {
+                        padding-left: 3rem;
+                        color: $frontground;
+                        &:hover {
+                            background-color: darken($highlight, 5%);
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+footer {
+    text-align: center;
+    height: 6rem;
+    padding-top: 2rem;
+
+    p {
+        line-height: 2rem;
     }
 }
