@@ -18,7 +18,7 @@
 @import "bootstrap";
 
 $highlight: #44aed8;
-$frontground: #eeeeee;
+$foreground: #efefef;
 
 header {
     .navbar {
@@ -27,27 +27,27 @@ header {
         border-color: $highlight;
 
         .navbar-toggle {
-            border-color: $frontground;
+            border-color: $foreground;
 
             .icon-bar {
-                color: $frontground;
-                background-color: $frontground;
+                color: $foreground;
+                background-color: $foreground;
             }
 
             &:hover {
-                color: lighten($frontground, 20%);
+                color: lighten($foreground, 20%);
                 background-color: darken($highlight, 5%);
             }
 
             &:focus {
-                color: lighten($frontground, 20%);
+                color: lighten($foreground, 20%);
                 background-color: darken($highlight, 5%);
             }
         }
         .navbar-brand {
             padding-left: 3rem;
             padding-right: 3rem;
-            color: $frontground;
+            color: $foreground;
             text-transform: uppercase;
 
             &:hover {
@@ -62,7 +62,7 @@ header {
                 li {
                     a {
                         padding-left: 3rem;
-                        color: $frontground;
+                        color: $foreground;
                         &:hover {
                             background-color: darken($highlight, 5%);
                         }
@@ -73,6 +73,11 @@ header {
     }
 }
 
+.yield-content {
+    margin-top: 20vh;
+    min-height: 60vh;
+}
+
 footer {
     text-align: center;
     height: 6rem;
@@ -80,5 +85,25 @@ footer {
 
     p {
         line-height: 2rem;
+    }
+}
+
+.btn-highlight {
+    background-color: $highlight;
+    color: $foreground;
+    margin: 0 auto;
+    width: 100%;
+    &:hover {
+        background-color: darken($highlight, 6%);
+        color: lighten($foreground, 10%);
+    }
+}
+
+a {
+    color: $highlight;
+
+    &:hover {
+        text-decoration: none;
+        color: darken($highlight, 20%);
     }
 }
