@@ -19,6 +19,7 @@
 
 $highlight: #44aed8;
 $foreground: #efefef;
+$error: #f1a6a6;
 
 header {
     .navbar {
@@ -74,7 +75,7 @@ header {
 }
 
 .yield-content {
-    margin-top: 20vh;
+    // margin-top: 20vh;
     min-height: 60vh;
 }
 
@@ -105,5 +106,30 @@ a {
     &:hover {
         text-decoration: none;
         color: darken($highlight, 20%);
+    }
+}
+
+#error_explanation {
+    border: 1px lighten($error, 10%) solid;
+    margin-bottom: 2rem;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        padding-left: 2rem;
+        height: 3.9rem;
+        line-height: 3.9rem;
+        color: $foreground;
+        background-color: $error;
+        font-size: 1.5rem;
+    }
+
+    ul {
+        margin: 0;
+        padding: 2rem;
+        color: $error;
+        list-style: none;
+        li {
+        }
     }
 }

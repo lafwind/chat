@@ -1,5 +1,9 @@
 @import './application.scss';
 
+.form-page {
+    margin-top: 20vh;
+}
+
 .form-group~.form-hint {
     margin-bottom: 5px;
 }
@@ -29,4 +33,12 @@
 .devise-links {
     margin-top: 2vh;
     text-align: center;
+}
+
+.field_with_errors {
+    input {
+
+        &:focus {
+        }
+    }
 }

@@ -9,6 +9,19 @@
   </head>
 
   <body>
+
+    <% if notice %>
+      <div class="notice_wrapper">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert_wrapper">
+        <%= alert %>
+      </div>
+    <% end %>
+
     <%= render 'shared/header' %>
 
     <div class="container yield-content">
