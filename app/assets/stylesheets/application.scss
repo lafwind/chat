@@ -19,6 +19,7 @@
 
 $highlight: #44aed8;
 $foreground: #efefef;
+$background: #333333;
 $error: #f1a6a6;
 
 header {
@@ -77,6 +78,7 @@ header {
 .yield-content {
     // margin-top: 20vh;
     min-height: 60vh;
+    margin-bottom: 5vh;
 }
 
 footer {

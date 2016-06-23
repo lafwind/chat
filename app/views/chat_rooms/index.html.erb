@@ -1,9 +1,19 @@
-<h1>Chat rooms</h1>
+<div class="row">
+  <div class="col-md-offset-2 col-md-8">
 
-<p>
-  <%= link_to 'New chat room', new_chat_room_path, class: 'btn'%>
-</p>
+    <h1 class="rooms-header page-header">
+      Chat rooms
+    </h1>
 
-<ul>
-  <%= render @chat_rooms %>
-</ul>
+    <ul class="rooms">
+      <%= render @chat_rooms %>
+    </ul>
+
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-highlight'%>
+      </div>
+    </div>
+
+  </div>
+</div>
