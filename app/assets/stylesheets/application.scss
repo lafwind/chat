@@ -111,7 +111,7 @@ a {
     }
 }
 
-#error_explanation {
+#error_explanation, .error-msgs {
     border: 1px lighten($error, 10%) solid;
     margin-bottom: 2rem;
 

@@ -1,0 +1,12 @@
+<% if item.errors.any? %>
+  <div class="error-msgs">
+    <h2><%= pluralize(item.errors.count, "error") %></h2>
+    <ul>
+      <% item.errors.messages.each do |msg| %>
+        <% msg.last.each do |detail| %>
+          <li><%= msg.first.capitalize %>: <%= detail.capitalize %></li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

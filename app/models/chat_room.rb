@@ -14,6 +14,7 @@ class ChatRoom < ApplicationRecord
   belongs_to :user
   has_many :messages, dependent: :destroy
 
+  validates :title, presence: true;
 
   def created_time
     created_at.strftime('%H:%M:%S %d %B %Y')
