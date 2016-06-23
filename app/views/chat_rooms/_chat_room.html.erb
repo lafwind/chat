@@ -4,12 +4,21 @@
   </div>
 
   <div class="room-detail">
-    <span class="small-gravatar">
-      <%= gravatar_for chat_room.owner %>
-    </span>
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-8">
+        <span class="small-gravatar">
+          <%= gravatar_for chat_room.owner %>
+        </span>
 
-    <span class="notes">
-      <%= "#{chat_room.owner.name.capitalize} created at #{chat_room.created_time}" %>
-    </span>
+        <span class="notes">
+          <%= "#{chat_room.owner.name.capitalize} created at #{chat_room.created_time}" %>
+        </span>
+      </div>
+
+      <div class="col-md-offset-2 col-md-2 col-sm-offset-2 col-sm-2 col-xs-4 count">
+        <%= pluralize(chat_room.messages_count, 'post') %>
+      </div>
+    </div>
+
   </div>
 </li>

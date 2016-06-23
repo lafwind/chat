@@ -11,11 +11,13 @@ h1.rooms-header {
 
 ul.rooms {
     list-style: none;
+    margin: 0;
+    padding: 0;
     margin-bottom: 6rem;
 
     li {
         display: block;
-        height: 8rem;
+        height: 9rem;
         // border: 1px solid $foreground;
         margin-bottom: 1rem;
         padding: 1rem 2rem;
@@ -46,6 +48,13 @@ ul.rooms {
 
             .notes {
                 color: lighten($background, 39%);
+                font-size: 1.2rem;
+            }
+
+            .count {
+                color: lighten($background, 39%);
+                display: inline-block;
+                text-align: right;
             }
         }
     }
