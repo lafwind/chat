@@ -1,10 +1,17 @@
-<h1>New chat room</h1>
+<div class="form-page">
 
-<%= form_for @chat_room do |f| %>
-  <div class="form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <%= form_for @chat_room do |f| %>
+
+        <div class="field form-group">
+          <%= f.label :chat_room_name %>
+          <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+        </div>
+
+        <%= f.submit 'New chat room', class: 'btn btn-highlight' %>
+      <% end %>
+    </div>
   </div>
 
-  <%= f.submit 'New', class: 'btn' %>
-<% end %>
+</div>

@@ -47,7 +47,7 @@ header {
             }
         }
         .navbar-brand {
-            padding-left: 3rem;
+            // padding-left: 3rem;
             padding-right: 3rem;
             color: $foreground;
             text-transform: uppercase;
@@ -63,7 +63,7 @@ header {
             ul.navbar-nav {
                 li {
                     a {
-                        padding-left: 3rem;
+                        // margin-left: 3rem;
                         color: $foreground;
                         &:hover {
                             background-color: darken($highlight, 5%);
