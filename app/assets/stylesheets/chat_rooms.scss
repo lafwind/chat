@@ -59,3 +59,34 @@ ul.rooms {
         }
     }
 }
+
+.messages-board {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+
+    .msg {
+        margin-bottom: 2rem;
+        .middle-gravatar {
+            img {
+                height: 5rem;
+                width: 5rem;
+                border-radius: 100%;
+            }
+
+            @media (max-width: 768px) {
+                img {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        .detail {
+            display: inline-block;
+            color: lighten($background, 39%);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

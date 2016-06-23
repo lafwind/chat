@@ -1,5 +1,19 @@
-<div>
-  <%= gravatar_for message.user %>
-  <span class="text-muted"><%= message.user.email %> at <%= message.timestamp %> says</span>
-  <%= message.body %>
+<div class="msg">
+  <div class="row">
+    <div class="col-md-2 col-sm-2 col-xs-2">
+      <div class="middle-gravatar">
+        <%= gravatar_for message.user %>
+      </div>
+    </div>
+    <div class="col-md-10 col-sm-10 col-xs-10">
+      <div class="row">
+        <span class="detail"><%= message.user.email %> at <%= message.timestamp %></span>
+      </div>
+      <div class="row">
+        <span class="msg-body">
+          <%= message.body %>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
