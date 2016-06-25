@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4">
+    <div class="profile">
+
+      <%= gravatar_for current_user %>
+      <div class="user-detail">
+        <p><%= current_user.name.capitalize %></p>
+        <p><%= current_user.email %></p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4 col-xs-offset-4 col-xs-4">
+          <%= link_to 'Edit', edit_user_registration_path, class: 'btn btn-highlight' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

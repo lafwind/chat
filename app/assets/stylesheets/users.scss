@@ -1,0 +1,23 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './application.scss';
+
+.profile {
+    padding-top: 10rem;
+    text-align: center;
+
+
+    .user-detail {
+        margin-bottom: 5rem;
+    }
+
+    img {
+        display: inline-block;
+        height:8rem;
+        width: 8rem;
+        border-radius: 100%;
+        margin-bottom: 5rem;
+    }
+}
