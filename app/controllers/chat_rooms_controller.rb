@@ -18,7 +18,7 @@ class ChatRoomsController < ApplicationController
       flash[:success] = 'Chat room build successfully~'
       redirect_to chat_rooms_path
     else
-      flash[:erroe] = 'Some error(s) happened!'
+      flash[:error] = 'Some error(s) happened!'
       render 'new'
     end
   end

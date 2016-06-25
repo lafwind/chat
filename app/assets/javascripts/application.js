@@ -15,3 +15,16 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+
+function wrapperAnimation(selector) {
+    setTimeout(function() {
+        $(selector).fadeOut('slow', function() {
+            $(this).remove();
+        });
+    }, 1600);
+}
+
+$(document).ready( function(){
+    wrapperAnimation('.notice_wrapper');
+    wrapperAnimation('.alert_wrapper');
+});
