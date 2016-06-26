@@ -102,9 +102,41 @@ footer {
     }
 }
 
+.btn-ex {
+    padding: 0;
+    width: 15rem;
+    height: 5rem;
+    line-height: 5rem;
+}
+
+@media (max-width: 768px) {
+    .btn-ex {
+        padding: 0;
+        width: 15rem;
+        height: 3.9rem;
+        line-height: 3.9rem;
+    }
+}
+
+.btn-white {
+    background-color: $foreground;
+    color: $highlight !important;
+
+    &:hover {
+        background-color: lighten($foreground, 10%);
+    }
+}
+
+.btn-list {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    a {
+        margin: 1rem 1.5rem;
+    }
+}
+
 a {
     color: $highlight;
-
     &:hover {
         text-decoration: none;
         color: darken($highlight, 20%);

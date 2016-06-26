@@ -1,0 +1,109 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import './application.scss';
+
+#background {
+    background-image: asset-url("sky_star.jpg");
+    background-size: cover;
+    background-position: center;
+    // background-color: $background;
+    height: 100vh;
+    width: 100%;
+    // min-height: 100%;
+    min-height: 50rem;
+
+    a {
+        color: $foreground;
+    }
+
+    header {
+        padding: 6rem 10rem;
+        height: 16rem;
+
+        #brand {
+            display: inline-block;
+            line-height: 4rem;
+            font-size: 4rem;
+        }
+
+        nav {
+            float: right;
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    line-height: 4rem;
+                    display: inline-block;
+                    margin-left: 2rem;
+                    a {
+                        display: inline-block;
+                        height: 4rem;
+                        font-size: 1.5rem;
+                    }
+                    &:hover {
+                        border-bottom: 1px $foreground solid;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        text-align: center;
+        color: $foreground;
+        padding-top: 16rem;
+        padding-right: 5rem;
+        padding-left: 5rem;
+
+        .slogan {
+            margin-bottom: 5rem;
+            font-size: 4rem;
+            line-height: 6.9rem;
+
+            p {
+                margin-bottom: 3rem;
+            }
+
+            #brand {
+                // font-size: 5rem;
+                display: inline-block;
+                padding: 0 2rem;
+                border: 3px $foreground solid;
+                border-radius: 5px;
+            }
+
+            a {
+                border-bottom: 3px $foreground solid;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    color: $highlight;
+                    border-bottom: 3px $highlight solid;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            padding-top: 10rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            .slogan {
+                margin-bottom: 6rem;
+                font-size: 3rem;
+                line-height: 5rem;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+}

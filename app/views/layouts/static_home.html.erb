@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width" />
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <% if notice %>
+      <div class="notice_wrapper">
+        <%= notice %>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert_wrapper">
+        <%= alert %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+  </body>
+</html>
