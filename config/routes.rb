@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'users#show'
 
-  root to: 'chat_rooms#index'
+  authenticated :user do
+    root to: 'chat_rooms#index', as: :authenticated_root
+  end
+
+  root to: 'static_pages#home'
 
   mount ActionCable.server => '/cable'
 end

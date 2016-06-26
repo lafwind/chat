@@ -1,4 +1,7 @@
 class ChatRoomsController < ApplicationController
+
+  before_action :authenticate_user!, only: [ :new, :create ]
+
   def index
     @chat_rooms = ChatRoom.all
   end
