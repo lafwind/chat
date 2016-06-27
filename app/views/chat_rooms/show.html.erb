@@ -9,7 +9,11 @@
     <%= form_for @message, url: '#' do |f| %>
       <div class="form-group">
         <%= f.text_area :body, placeholder: 'message', class: 'form-control' %>
-        <%= f.submit 'send', class: 'btn btn-highlight'%>
+        <% if user_signed_in? %>
+          <%= f.submit 'send', class: 'btn btn-highlight' %>
+        <% else %>
+          <%= f.submit 'send', class: 'btn btn-disabled', disabled: true %>
+        <% end %>
       </div>
     <% end %>
 

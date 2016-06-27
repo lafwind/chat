@@ -9,11 +9,13 @@
       <%= render @chat_rooms %>
     </ul>
 
-    <div class="row">
-      <div class="col-md-offset-4 col-md-4">
-        <%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-highlight'%>
+    <% if user_signed_in? %>
+      <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+          <%= link_to 'New chat room', new_chat_room_path, class: 'btn btn-highlight'%>
+        </div>
       </div>
-    </div>
+    <% end %>
 
   </div>
 </div>

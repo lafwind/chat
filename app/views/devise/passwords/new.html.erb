@@ -4,7 +4,11 @@
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <div class="form-horizontal">
 
-        <%= devise_error_messages! %>
+        <div class="row">
+          <div class="col-md-offset-2 col-md-8">
+            <%= devise_error_messages! %>
+          </div>
+        </div>
 
         <div class="field form-group">
           <%= f.label :email, class: 'col-md-2 control-label' %>

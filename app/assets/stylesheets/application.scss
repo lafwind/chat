@@ -102,6 +102,15 @@ footer {
     }
 }
 
+.btn-disabled {
+    width: 100%;
+    color: darken($foreground, 39%);
+
+    &:hover {
+        color: darken($foreground, 39%);
+    }
+}
+
 .btn-ex {
     padding: 0;
     width: 15rem;
