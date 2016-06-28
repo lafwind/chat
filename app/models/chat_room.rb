@@ -17,7 +17,7 @@ class ChatRoom < ApplicationRecord
   validates :title, presence: true;
 
   def created_time
-    created_at.strftime('%H:%M:%S %d %B %Y')
+    created_at.strftime('%H:%M %d %B %Y')
   end
 
   def owner

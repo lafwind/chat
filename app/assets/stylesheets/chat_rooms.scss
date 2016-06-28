@@ -24,16 +24,19 @@ ul.rooms {
 
         &:hover {
             background: lighten($foreground, 3%);
+
+            .room-detail {
+                .count {
+                    color: $highlight;
+                }
+            }
         }
 
         .room-title {
             margin-bottom: 1rem;
-            a {
-                color: $background;
-                font-size: 2rem;
-                text-transform: capitalize;
-
-            }
+            color: $background;
+            font-size: 2rem;
+            text-transform: capitalize;
         }
 
         .room-detail {
@@ -51,11 +54,26 @@ ul.rooms {
                 font-size: 1.2rem;
             }
 
+
             .count {
                 color: lighten($background, 39%);
+                width: 100%;
                 display: inline-block;
                 text-align: right;
             }
+
+            @media (max-width: 768px) {
+                .count {
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+    }
+
+    @media (max-width: 768px) {
+        li {
+            padding: .5rem 1rem;
         }
     }
 }
@@ -87,6 +105,12 @@ ul.rooms {
             color: lighten($background, 39%);
             font-size: 1.3rem;
             margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px){
+            .detail {
+                font-size: 1.2rem;
+            }
         }
     }
 }
