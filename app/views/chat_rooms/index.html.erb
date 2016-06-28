@@ -9,6 +9,14 @@
       <%= render @chat_rooms %>
     </ul>
 
+    <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <span class="paginate">
+          <%= will_paginate @chat_rooms%>
+        </span>
+      </div>
+    </div>
+
     <% if user_signed_in? %>
       <div class="row">
         <div class="col-md-offset-4 col-md-4">

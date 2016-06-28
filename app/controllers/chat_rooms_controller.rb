@@ -3,7 +3,7 @@ class ChatRoomsController < ApplicationController
   before_action :authenticate_user!, only: [ :new, :create ]
 
   def index
-    @chat_rooms = ChatRoom.all
+    @chat_rooms = ChatRoom.paginate(page: params[:page])
   end
 
   def show

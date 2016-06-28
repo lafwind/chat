@@ -16,6 +16,9 @@ class ChatRoom < ApplicationRecord
 
   validates :title, presence: true;
 
+  # For will_paginate
+  self.per_page = 10
+
   def created_time
     created_at.strftime('%H:%M %d %B %Y')
   end
