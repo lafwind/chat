@@ -1,21 +1,14 @@
-<div class="row">
-  <div class="col-md-offset-3 col-md-6">
-    <h1 class="page-header"><%= @chat_room.title.upcase %></h1>
-
-    <div id="messages" class="messages-board" data-chat-room-id="<%= @chat_room.id %>">
-      <%= render @chat_room.messages %>
-    </div>
-
-    <%= form_for @message, url: '#' do |f| %>
-      <div class="form-group">
-        <%= f.text_area :body, placeholder: 'message', class: 'form-control' %>
-        <% if user_signed_in? %>
-          <%= f.submit 'send', class: 'btn btn-highlight' %>
-        <% else %>
-          <%= f.submit 'Please login or sign up', class: 'btn btn-disabled', disabled: true %>
-        <% end %>
-      </div>
-    <% end %>
-
-  </div>
+<div id="messages" class="messages-board" data-chat-room-id="<%= @chat_room.id %>">
+  <%= render @chat_room.messages %>
 </div>
+
+<%= form_for @message, url: '#' do |f| %>
+  <div class="form-group">
+    <%= f.text_area :body, placeholder: 'message', class: 'form-control' %>
+    <% if user_signed_in? %>
+      <%= f.submit 'send', class: 'btn btn-highlight' %>
+    <% else %>
+      <%= f.submit 'Please login or sign up', class: 'btn btn-disabled', disabled: true %>
+    <% end %>
+  </div>
+<% end %>
