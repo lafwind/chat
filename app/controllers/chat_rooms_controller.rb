@@ -2,6 +2,8 @@ class ChatRoomsController < ApplicationController
 
   before_action :authenticate_user!, only: [ :new, :create ]
 
+  layout 'msg_board', only: [ :show ]
+
   def index
     @chat_rooms = ChatRoom.paginate(page: params[:page])
   end

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat</title>
+    <meta name="viewport" content="width=device-width" />
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="msg-layout">
+
+    <div id="wrapper" class="menuDisplayed">
+      <!-- Sidebar -->
+      <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <a href="#"> Start Bootstrap </a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="dropdown-header">Dropdown heading</li>
+              <li><a href="#">Action</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- end of sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-6">
+              <a href="" class="btn btn-highlight" id="menu-toggle">Toggle Menu</a>
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of page content -->
+    </div>
+  </body>
+</html>
