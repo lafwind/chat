@@ -2,17 +2,14 @@
 <html>
   <head>
     <title>Chat</title>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body class="msg-layout">
-
     <div id="wrapper" class="menuDisplayed">
-      <!-- overlay -->
-      <div class="overlay"></div>
 
       <!-- Sidebar -->
       <nav id="sidebar-wrapper">
@@ -40,7 +37,7 @@
       <div id="page-content-wrapper">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-offset-2 col-md-4">
+            <div class="col-md-offset-1 col-md-6">
               <a href="" id="menu-toggle">Toggle Menu</a>
               <%= yield %>
             </div>

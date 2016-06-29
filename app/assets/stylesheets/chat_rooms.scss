@@ -87,32 +87,58 @@ ul.rooms {
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .msg-layout {
     background-color: $msg-background;
-    overflow-x: hidden;
-}
-
-
-.overlay {
-    position: fixed;
-    display: none;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,.4);
-    z-index: 1;
+    overflow-x: hidden !important;
 }
-
 
 #wrapper {
     padding-left: 0;
+    transition: all .1s ease-in-out;
 }
 
 #wrapper.menuDisplayed {
     padding-left: 350px;
+
     #sidebar-wrapper {
         width: 350px;
     }
@@ -127,47 +153,17 @@ ul.rooms {
     display: none;
 }
 
-@media (max-width: 768px) {
-
-    #wrapper.menuDisplayed {
-        padding-left: 0;
-        #sidebar-wrapper {
-            width: 0;
-        }
-
-        #page-content-wrapper {
-            margin-right: 0;
-            position: static;
-        }
-    }
-
-    #wrapper {
-        padding-left: 350px;
-        #sidebar-wrapper {
-            width: 350px;
-        }
-
-        #page-content-wrapper {
-            margin-right: -350px;
-            position: absolute;
-        }
-    }
-    #menu-toggle {
-        display: block;
-    }
-}
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    // position: absolute;
-    width: 0px;
-
     height: 100%;
     left: 350px;
     margin-left: -350px;
     overflow-x: hidden;
     overflow-y: auto;
+    width: 0px;
+    transition: all .1s ease-in-out;
 
     &::-webkit-scrollbar {
         display: none;
@@ -188,9 +184,121 @@ ul.rooms {
 
 #page-content-wrapper {
     width: 100%;
-    // position: absolute;
-    padding: 15px;
 }
+
+
+
+@media (max-width: 992px) {
+
+    #wrapper.menuDisplayed {
+        padding-left: 0;
+        #sidebar-wrapper {
+            width: 0;
+        }
+
+        #page-content-wrapper {
+            margin-right: 0;
+            position: relative;
+        }
+    }
+
+    #wrapper {
+        padding-left: 350px;
+        #sidebar-wrapper {
+            width: 350px;
+        }
+
+        #page-content-wrapper {
+            margin-right: -350px;
+            position: absolute;
+        }
+    }
+    #menu-toggle {
+        display: block;
+    }
+}
+
+
+@media (max-width: 350px) {
+
+    #wrapper.menuDisplayed {
+        padding-left: 0;
+        #sidebar-wrapper {
+            width: 0;
+        }
+
+        #page-content-wrapper {
+            margin-right: 0;
+            position: relative;
+        }
+    }
+
+    #wrapper {
+        padding-left: 220px;
+        #sidebar-wrapper {
+
+            left: 220px;
+            margin-left: -220px;
+            width: 220px;
+        }
+
+        #page-content-wrapper {
+            margin-right: -220px;
+            position: absolute;
+        }
+    }
+    #menu-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .messages-board {
     margin-top: 3rem;
