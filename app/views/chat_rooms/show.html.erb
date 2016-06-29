@@ -12,7 +12,7 @@
         <% if user_signed_in? %>
           <%= f.submit 'send', class: 'btn btn-highlight' %>
         <% else %>
-          <%= f.submit 'send', class: 'btn btn-disabled', disabled: true %>
+          <%= f.submit 'Please login or sign up', class: 'btn btn-disabled', disabled: true %>
         <% end %>
       </div>
     <% end %>

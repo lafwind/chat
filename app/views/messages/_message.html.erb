@@ -1,19 +1,27 @@
 <div class="msg">
-  <div class="row">
-    <div class="col-md-2 col-sm-2 col-xs-2">
-      <div class="middle-gravatar">
-        <%= gravatar_for message.user %>
+  <div class="msg-frame">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <div class="middle-gravatar">
+          <%= gravatar_for message.user %>
+        </div>
+      </div>
+      <div class="col-md-10 col-sm-10 col-xs-10">
+        <div class="row">
+          <span class="detail"><%= message.user.email %></span>
+        </div>
+        <div class="row">
+
+          <span class="msg-body">
+            <%= message.body %>
+          </span>
+
+        </div>
       </div>
     </div>
-    <div class="col-md-10 col-sm-10 col-xs-10">
-      <div class="row">
-        <span class="detail"><%= message.user.email %> at <%= message.timestamp %></span>
-      </div>
-      <div class="row">
-        <span class="msg-body">
-          <%= message.body %>
-        </span>
-      </div>
-    </div>
+  </div>
+
+  <div class="time">
+    <%= message.timestamp %>
   </div>
 </div>

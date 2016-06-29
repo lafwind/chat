@@ -89,7 +89,16 @@ ul.rooms {
     margin-bottom: 5rem;
 
     .msg {
+        // box-sizing: content-box !important;
+
         margin-bottom: 2rem;
+        .msg-frame {
+            background-color: lighten($foreground, 3%);
+            border: 1px lighten($foreground, 3%) solid;
+            border-radius: 33px 33px 33px 0;
+            box-shadow: 0px 10px 20px lighten($foreground, 0%);
+            padding: 2rem;
+        }
         .middle-gravatar {
             img {
                 height: 5rem;
@@ -117,6 +126,12 @@ ul.rooms {
             .detail {
                 font-size: 1.2rem;
             }
+        }
+
+        .time {
+            color: darken($foreground, 30%);
+            font-size: 1rem;
+            margin-top: 1.5rem;
         }
     }
 }
