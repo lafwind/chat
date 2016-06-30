@@ -168,24 +168,51 @@ ul.rooms {
     &::-webkit-scrollbar {
         display: none;
     }
-
     border: 1px red solid;
 
-    ul.sidebar-nav {
-        list-style: none;
-        a {
-            color: lighten($background, 10%);
-        }
-    }
-    .sidebar-brand {
-        text-transform: uppercase;
-    }
 }
 
 #page-content-wrapper {
     width: 100%;
 }
 
+
+ul.sidebar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 5rem 8rem;
+
+    li {
+        margin-bottom: 2rem;
+    }
+
+    a {
+        color: lighten($background, 10%);
+    }
+
+    .sidebar-brand {
+        text-transform: uppercase;
+        font-size: 3rem;
+    }
+
+    .room-title {
+        font-size: 5rem;
+    }
+
+    .room-creator {
+        font-size: 1.8rem;
+    }
+
+    .created_time {
+        font-size: 1.8rem;
+    }
+
+    .normal-text {
+        color: lighten($background, 20%);
+        font-size: 1.2rem;
+    }
+}
 
 
 @media (max-width: 992px) {
@@ -206,6 +233,16 @@ ul.rooms {
         padding-left: 350px;
         #sidebar-wrapper {
             width: 350px;
+            background-color: $background;
+
+            color: $foreground;
+
+            li, a {
+                color: $foreground;
+            }
+            .normal-text {
+                color: darken($foreground, 20%);
+            }
         }
 
         #page-content-wrapper {
@@ -213,6 +250,7 @@ ul.rooms {
             position: absolute;
         }
     }
+
     #menu-toggle {
         display: block;
     }
@@ -236,15 +274,43 @@ ul.rooms {
     #wrapper {
         padding-left: 220px;
         #sidebar-wrapper {
-
             left: 220px;
             margin-left: -220px;
             width: 220px;
+            background-color: $background;
         }
 
         #page-content-wrapper {
             margin-right: -220px;
             position: absolute;
+        }
+    }
+
+    ul.sidebar-nav {
+        margin: 5rem 3rem;
+        li, a {
+            color: $foreground;
+        }
+
+        .sidebar-brand {
+            font-size: 2rem;
+        }
+
+        .room-title {
+            font-size: 3rem;
+        }
+
+        .room-creator {
+            font-size: 1.5rem;
+        }
+
+        .created_time {
+            font-size: 1.5rem;
+        }
+
+        .normal-text {
+            color: lighten($background, 20%);
+            font-size: 1rem;
         }
     }
     #menu-toggle {
@@ -301,7 +367,7 @@ ul.rooms {
 
 
 .messages-board {
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-bottom: 5rem;
 
     .msg {
