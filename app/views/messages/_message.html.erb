@@ -1,58 +1,7 @@
 <div class="msg">
   <% if message.user == current_user %>
-    <div class="row">
-      <div class="col-md-offset-3 col-md-9 col-sm-offset-3 col-sm-9 col-xs-offset-3 col-xs-9">
-        <div class="msg-frame msg-by-me">
-          <div class="row">
-            <div class="col-md-9 col-sm-9 col-xs-9 leave-left">
-              <div class="row">
-                <span class="msg-body">
-                  <%= message.body %>
-                </span>
-              </div>
-            </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-              <div class="middle-gravatar">
-                <%= gravatar_for message.user %>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="time by-me">
-      <%= message.timestamp %>
-    </div>
+    <%= render partial: 'messages/message_by_current_user', locals: { message: message } %>
   <% else %>
-    <div class="row">
-      <div class="col-md-9 col-sm-9 col-xs-9">
-        <div class="msg-frame">
-          <div class="row">
-            <div class="col-md-3 col-sm-3 col-xs-3">
-              <div class="middle-gravatar">
-                <%= gravatar_for message.user %>
-              </div>
-            </div>
-            <div class="col-md-9 col-sm-9 col-xs-9 leave-right">
-              <div class="row">
-                <span class="detail"><%= message.user.email %></span>
-              </div>
-
-              <div class="row">
-                <span class="msg-body">
-                  <%= message.body %>
-                </span>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="time">
-      <%= message.timestamp %>
-    </div>
+    <%= render partial: 'messages/message_by_others', locals: { message: message } %>
   <% end %>
-
 </div>

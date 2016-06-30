@@ -14,7 +14,15 @@ jQuery(document).on 'turbolinks:load', ->
         # Called when the subscription has been terminated by the server
 
       received: (data) ->
-        messages.append data['message']
+        content = document.createElement("div");
+        content.className = "msg"
+
+        if data['message_owner_id'] == messages.data('current-user-id')
+          content.innerHTML =  data['message_for_current_user']
+        else
+          content.innerHTML =  data['message_for_others']
+
+        messages.append content
         messages_to_bottom()
 
       send_message: (message, chat_room_id)->

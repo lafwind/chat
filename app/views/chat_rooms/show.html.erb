@@ -37,7 +37,7 @@
 
 <% end %>
 
-<div id="messages" class="messages-board" data-chat-room-id="<%= @chat_room.id %>">
+<div id="messages" class="messages-board" data-chat-room-id="<%= @chat_room.id %>" data-current-user-id="<%= current_user.id%>" >
   <%= render @chat_room.messages %>
 </div>
 
