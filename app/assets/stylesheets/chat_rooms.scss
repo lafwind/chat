@@ -168,7 +168,6 @@ ul.rooms {
     &::-webkit-scrollbar {
         display: none;
     }
-    border: 1px red solid;
 
 }
 
@@ -375,18 +374,47 @@ ul.sidebar-nav {
         .msg-frame {
             background-color: lighten($foreground, 10%);
             border: 1px lighten($foreground, 10%) solid;
-            border-radius: 33px 33px 33px 0;
+            border-radius: 23px 23px 23px 0;
             box-shadow: -10px 10px 20px lighten($foreground, 0%);
-            padding: 2rem;
+            padding: .8rem;
+            // padding-bottom: .8rem;
+            min-height: 6.3rem;
         }
+
+        .msg-frame.msg-by-me {
+            background-color: lighten($highlight, 0%);
+            border: 1px lighten($highlight, 0%) solid;
+            border-radius: 23px 23px 0 23px;
+            box-shadow: 1px 3px 20px lighten($highlight, 20%);
+
+            .detail {
+                color: $foreground;
+                width: 100%;
+                // text-align: right;
+                text-align: justify;
+            }
+
+            .msg-body {
+                color: $foreground;
+                display: inline-block;
+                width: 100%;
+                text-align: justify;
+                padding-top: 1rem;
+            }
+        }
+
         .middle-gravatar {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding-top: .5rem;
             img {
-                height: 5rem;
-                width: 5rem;
+                height: 3rem;
+                width: 3rem;
                 border-radius: 100%;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 350px) {
                 img {
                     height: 2.5rem;
                     width: 2.5rem;
@@ -395,14 +423,22 @@ ul.sidebar-nav {
             }
         }
 
+        .leave-left {
+            padding-left: 5rem;
+        }
+
+        .leave-right{
+            padding-right: 3.3rem;
+        }
+
         .detail {
             display: inline-block;
             color: lighten($background, 39%);
             font-size: 1.3rem;
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
         }
 
-        @media (max-width: 768px){
+        @media (max-width: 350px){
             .detail {
                 font-size: 1.2rem;
             }
@@ -412,6 +448,10 @@ ul.sidebar-nav {
             color: darken($foreground, 30%);
             font-size: 1rem;
             margin-top: 1.5rem;
+        }
+
+        .time.by-me {
+            text-align: right;
         }
     }
 }
