@@ -129,6 +129,24 @@ ul.rooms {
     background-color: $msg-background;
     width: 100%;
     overflow-x: hidden !important;
+
+    #menu-toggle {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        line-height: 2rem;
+
+        &:hover {
+            color: $highlight;
+        }
+
+        &:focus {
+            color: $highlight;
+        }
+
+        .fa {
+            font-size: 2rem;
+        }
+    }
 }
 
 #wrapper {
@@ -180,7 +198,7 @@ ul.sidebar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin: 5rem 8rem;
+    margin: 6rem 8rem;
 
     li {
         margin-bottom: 2rem;
@@ -247,11 +265,18 @@ ul.sidebar-nav {
         #page-content-wrapper {
             margin-right: -350px;
             position: absolute;
+
+            // .messages-board {
+            //     margin-top: 0;
+            // }
         }
     }
 
     #menu-toggle {
+        // display: inline-block;
         display: block;
+        position: fixed;
+        z-index: 999;
     }
 }
 
@@ -286,7 +311,7 @@ ul.sidebar-nav {
     }
 
     ul.sidebar-nav {
-        margin: 5rem 3rem;
+        margin: 6rem 3rem;
         li, a {
             color: $foreground;
         }
@@ -312,8 +337,9 @@ ul.sidebar-nav {
             font-size: 1rem;
         }
     }
+
     #menu-toggle {
-        display: block;
+        display: inline-block;
     }
 }
 
@@ -366,8 +392,8 @@ ul.sidebar-nav {
 
 
 .messages-board {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
 
     .msg {
         margin-bottom: 2rem;
