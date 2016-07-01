@@ -171,6 +171,10 @@ ul.rooms {
     display: none;
 }
 
+.min-margin {
+    margin-left: 2rem !important;
+}
+
 
 #sidebar-wrapper {
     z-index: 1000;
@@ -198,7 +202,8 @@ ul.sidebar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin: 6rem 8rem;
+    margin: 6rem 0;
+    margin-left: 15rem;
 
     li {
         margin-bottom: 2rem;
@@ -214,7 +219,8 @@ ul.sidebar-nav {
     }
 
     .room-title {
-        font-size: 5rem;
+        word-wrap: break-word;
+        font-size: 3.6rem;
     }
 
     .room-creator {
@@ -222,17 +228,21 @@ ul.sidebar-nav {
     }
 
     .created_time {
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
+        color: lighten($background, 36%);
     }
 
     .normal-text {
-        color: lighten($background, 20%);
+        color: lighten($background, 36%);
         font-size: 1.2rem;
     }
 }
 
 
 @media (max-width: 992px) {
+    .min-margin {
+        margin-left: 1rem !important;
+    }
 
     #wrapper.menuDisplayed {
         padding-left: 0;
@@ -251,14 +261,10 @@ ul.sidebar-nav {
         #sidebar-wrapper {
             width: 350px;
             background-color: $background;
-
             color: $foreground;
 
             li, a {
                 color: $foreground;
-            }
-            .normal-text {
-                color: darken($foreground, 20%);
             }
         }
 
@@ -272,6 +278,10 @@ ul.sidebar-nav {
         }
     }
 
+    ul.sidebar-nav {
+        margin-left: 10rem;
+    }
+
     #menu-toggle {
         // display: inline-block;
         display: block;
@@ -282,6 +292,10 @@ ul.sidebar-nav {
 
 
 @media (max-width: 350px) {
+
+    .min-margin {
+        margin-left: 1rem !important;
+    }
 
     #wrapper.menuDisplayed {
         padding-left: 0;
@@ -321,7 +335,8 @@ ul.sidebar-nav {
         }
 
         .room-title {
-            font-size: 3rem;
+            word-wrap: break-word;
+            font-size: 2.5rem;
         }
 
         .room-creator {
@@ -329,11 +344,13 @@ ul.sidebar-nav {
         }
 
         .created_time {
-            font-size: 1.5rem;
+            color: darken($foreground, 25%);
+            font-size: 1rem;
         }
 
         .normal-text {
-            color: lighten($background, 20%);
+
+            color: darken($foreground, 25%);
             font-size: 1rem;
         }
     }

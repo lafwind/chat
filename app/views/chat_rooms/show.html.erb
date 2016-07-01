@@ -6,6 +6,14 @@
       </li>
 
       <li>
+        <%= link_to "Profile", profile_path(current_user) %>
+      </li>
+
+      <li>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      </li>
+
+      <li>
         <%= link_to @chat_room.title.upcase, chat_room_path(@chat_room), class: 'room-title' %>
       </li>
 
@@ -22,7 +30,6 @@
           <%= @chat_room.created_time %>
         </span>
       </li>
-
 
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Online Users <span class="caret"></span></a>
