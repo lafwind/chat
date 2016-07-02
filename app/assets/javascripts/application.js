@@ -24,7 +24,26 @@ function wrapperAnimation(selector) {
     }, 1600);
 }
 
-$(document).ready( function(){
+function toggleMenu() {
+    $('#menu-toggle').click( function(e) {
+        e.preventDefault();
+        $('#wrapper').toggleClass('menuDisplayed');
+        $('.fa').toggleClass('fa-bars').toggleClass('fa-times');
+    });
+}
+
+// For turbolinks
+
+$(document).on('turbolinks:load', function() {
     wrapperAnimation('.notice_wrapper');
     wrapperAnimation('.alert_wrapper');
+    toggleMenu();
 });
+
+// For jQuery without turbolinks
+
+// $(document).ready( function(){
+//     wrapperAnimation('.notice_wrapper');
+//     wrapperAnimation('.alert_wrapper');
+//     toggleMenu();
+// });
