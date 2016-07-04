@@ -93,6 +93,12 @@ footer {
     }
 }
 
+.btn {
+    &:focus {
+        color: $foreground;
+    }
+}
+
 .btn-highlight {
     background-color: $highlight;
     color: $foreground;
