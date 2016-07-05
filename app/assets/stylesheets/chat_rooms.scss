@@ -102,8 +102,8 @@ ul.rooms {
         }
 
         .msg-frame.msg-by-me {
-            background-color: lighten($highlight, 0%);
-            border: 1px lighten($highlight, 0%) solid;
+            background-color: lighten($highlight, 6%);
+            border: 1px lighten($highlight, 6%) solid;
             border-radius: 23px 23px 0 23px;
             box-shadow: 1px 3px 20px lighten($highlight, 20%);
 

@@ -43,3 +43,14 @@
         }
     }
 }
+
+
+.form-control:focus {
+    border-color: lighten($highlight, 20%) !important;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(246, 183, 148, 0.6) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(246, 183, 148, 0.6) !important;
+    -ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(246, 183, 148, 0.6) !important;
+    -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(246, 183, 148, 0.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(246, 183, 148, 0.6) !important;
+}

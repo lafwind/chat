@@ -19,10 +19,14 @@
 @import "bootstrap";
 @import "font-awesome";
 
-$highlight: #44aed8;
+// $highlight: #44aed8;
+$highlight: #ee7836;
+// $highlight: #f9653e;
+// $highlight: #ca2a4a;
 $foreground: #efefef;
 $background: #333333;
-$error: #f1a6a6;
+// $error: #f1a6a6;
+$error: #ca2a4a;
 
 header {
     .navbar {
@@ -96,6 +100,7 @@ footer {
 .btn {
     &:focus {
         color: $foreground;
+        outline: none !important;
     }
 }
 
