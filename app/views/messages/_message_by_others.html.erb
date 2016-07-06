@@ -4,12 +4,16 @@
       <div class="row">
         <div class="col-md-3 col-sm-3 col-xs-4">
           <div class="middle-gravatar">
-            <%= gravatar_for message.user %>
+            <%= link_to profile_path(message.user) do %>
+              <%= gravatar_for message.user %>
+            <% end %>
           </div>
         </div>
         <div class="col-md-9 col-sm-9 col-xs-8 leave-right">
           <div class="row">
-            <span class="detail"><%= message.user.email %></span>
+            <%= link_to profile_path(message.user) do %>
+              <span class="detail"><%= message.user.name.capitalize %></span>
+            <% end %>
           </div>
 
           <div class="row">

@@ -15,7 +15,7 @@
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li>
-              <%= link_to current_user.name.capitalize, profile_path %>
+              <%= link_to current_user.name.capitalize, profile_path(current_user) %>
             </li>
 
             <li>

@@ -5,13 +5,15 @@
         <%= link_to 'Join', root_path %>
       </li>
 
-      <li>
-        <%= link_to "Profile", profile_path(current_user) %>
-      </li>
+      <% if user_signed_in?  %>
+        <li>
+          <%= link_to "Profile", profile_path(current_user) %>
+        </li>
 
-      <li>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
-      </li>
+        <li>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
+        </li>
+      <% end %>
 
       <li>
         <%= link_to @chat_room.title.upcase, chat_room_path(@chat_room), class: 'room-title' %>

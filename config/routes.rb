@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :chat_rooms, only: [:index, :show, :new, :create]
   # get '/chat_rooms/:id', to: redirect('/chat_rooms/%{id}'), as: 'chat_room'
 
-  get 'profile', to: 'users#show'
+  get 'profile/:id', to: 'users#show', as: :profile
 
 
   authenticated :user do
