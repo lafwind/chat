@@ -58,6 +58,7 @@ WORKDIR /my_app/chat
 # RUN mkdir -pv tmp/{pids,sockets}
 # ENV RAILS_ENV docker
 RUN bundle install -V
+ENV RACK_ENV="production" RAILS_ENV="production"
 RUN chmod 777 start.sh
 ## ENV DB_HOST ------
 ## ENV DB_USERNAME ------
