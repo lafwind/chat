@@ -1,3 +1,3 @@
-rails db:seed
-# puma -e docker -C config/docker_puma.rb
-web: bundle exec puma -C config/puma.rb
+rails db:migrate
+puma -e production -C config/puma.rb
+# web: bundle exec puma -C config/puma.rb
