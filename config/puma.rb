@@ -16,6 +16,6 @@
 
 environment 'production'
 daemonize false
-threads 0, 4
+threads 0, 5
 bind 'tcp://0.0.0.0:80'
 preload_app!
