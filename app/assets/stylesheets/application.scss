@@ -98,6 +98,7 @@ footer {
 }
 
 .btn {
+    border-radius: .2rem !important;
     &:focus {
         color: $foreground;
         outline: none !important;

@@ -26,6 +26,16 @@
 }
 
 .field {
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        // box-sizing: border-box !important;
+        // width: 100%;
+        padding: 1.5rem;
+        outline: none;
+        // border: 1px $foreground solid;
+        border-radius: .2rem !important;
+    }
+
     label {
         font-weight: 300;
     }
