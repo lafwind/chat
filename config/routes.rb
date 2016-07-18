@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  ActiveAdmin.routes(self)
   devise_for :users
   resources :chat_rooms, only: [:index, :show, :new, :create]
   # get '/chat_rooms/:id', to: redirect('/chat_rooms/%{id}'), as: 'chat_room'

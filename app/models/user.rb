@@ -27,6 +27,10 @@ class User < ApplicationRecord
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
 
-  validates :name, presence: true, length: { minimum: 6, maximum: 20 }, uniqueness: true
+  validates :name, presence: true, length: { minimum: 3, maximum: 20 }, uniqueness: true
+
+  def has_role?(role)
+    self.role == role
+  end
 
 end

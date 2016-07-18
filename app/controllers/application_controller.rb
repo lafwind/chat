@@ -11,4 +11,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
+
+  def authenticate_admin_user!
+    authenticate_user!
+    unless current_user.has_role?('Admin')
+      flash[:alert] = 'You are not authorized to access this resource!'
+      redirect_to root_path
+    end
+  end
 end
