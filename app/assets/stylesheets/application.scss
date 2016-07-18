@@ -11,7 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  *= require font-awesome
- *= require_tree .
+ *= require chat_rooms
+ *= require form
+ *= require msg_board_layout
+ *= require static_pages
+ *= require users
  *= require_self
  */
 
@@ -209,3 +213,9 @@ a {
 .alert_wrapper {
     background-color: $error;
 }
+
+// @import './chat_rooms.scss';
+// @import './form.scss';
+// @import './msg_board_layout.scss';
+// @import './static_pages.scss';
+// @import './users.scss';
