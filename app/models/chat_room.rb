@@ -16,6 +16,9 @@ class ChatRoom < ApplicationRecord
 
   validates :title, presence: true;
 
+  scope :recent, -> (n) { order(created_at: :DESC).limit(n) }
+  scope :hot, -> { where("messages_count >= ?", 20) }
+
   # For will_paginate
   self.per_page = 10
 
