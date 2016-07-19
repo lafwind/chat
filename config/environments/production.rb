@@ -39,8 +39,8 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
-  config.action_cable.url = "wss://lafwind-chat.daoapp.io/cable"
-  config.action_cable.allowed_request_origins = ['http://lafwind-chat.daoapp.io']
+  config.action_cable.url = "wss://chat.daoapp.io/cable"
+  config.action_cable.allowed_request_origins = ['http://chat.daoapp.io']
 
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
