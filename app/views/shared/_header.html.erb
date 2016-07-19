@@ -18,6 +18,12 @@
               <%= link_to current_user.name.capitalize, profile_path(current_user) %>
             </li>
 
+            <% if current_user.has_role?("Admin") %>
+              <li>
+                <%= link_to "Admin Panel", admin_root_path %>
+              </li>
+            <% end %>
+
             <li>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, data: { confirm: "Are you sure?" } %>
             </li>

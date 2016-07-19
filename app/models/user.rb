@@ -17,13 +17,16 @@
 #  updated_at             :datetime         not null
 #  name                   :string
 #  role                   :string
+#  confirmation_token     :string
+#  confirmed_at           :datetime
+#  confirmation_sent_at   :datetime
 #
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :chat_rooms, dependent: :destroy
   has_many :messages, dependent: :destroy
